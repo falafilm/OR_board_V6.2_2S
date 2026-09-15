@@ -1,0 +1,26 @@
+line: test5
+tt_sec: 10
+count_per_cycle: 1
+threshold: 90
+day_start: 08:00
+night_start: '20:00'
+reset_day_time: 07:59
+reset_night_time: '19:59'
+day_breaks:
+- enabled: true
+  start: '10:00'
+  end: '10:10'
+- enabled: true
+  start: '12:00'
+  end: '13:00'
+- enabled: true
+  start: '15:00'
+  end: '15:10'
+- enabled: true
+  start: '17:00'
+  end: '17:30'
+night_breaks:
+- enabled: true
+  start: '21:00'
+  end: '21:10'
+enable: true

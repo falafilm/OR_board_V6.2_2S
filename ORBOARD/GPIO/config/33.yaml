@@ -1,0 +1,12 @@
+line: '33'
+tt_sec: 1
+count_per_cycle: 1
+threshold: 80
+day_start: 08:00
+night_start: '20:00'
+reset_day_time: 07:50
+reset_night_time: '19:50'
+day_breaks: []
+night_breaks: []
+enable: true
+updated_at: '2026-03-26 16:00:08'

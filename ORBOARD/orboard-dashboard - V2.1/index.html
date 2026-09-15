@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/Denso-Logo.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OR Board</title>
+
+    <meta key="title" content="OR Board" property="og:title" />
+    <meta
+      content="Make beautiful websites regardless of your design experience."
+      property="og:description"
+    />
+    <meta
+      content="Make beautiful websites regardless of your design experience."
+      name="description"
+    />
+    <meta
+      key="viewport"
+      content="viewport-fit=cover, width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
+      name="viewport"
+    />
+    <link href="/img/favicon.ico" rel="icon" />
+
+    <!-- Runtime config loader -->
+    <script>
+      window.RUNTIME_CONFIG = {};
+    </script>
+
+    <script>
+      fetch("/config.json")
+        .then((res) => res.json())
+        .then((cfg) => {
+          window.RUNTIME_CONFIG = cfg;
+        })
+        .catch(() => {
+          console.warn("⚠ Using default runtime config");
+        });
+    </script>
+  </head>
+
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

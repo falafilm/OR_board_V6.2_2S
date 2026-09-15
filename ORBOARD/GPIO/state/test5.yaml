@@ -1,0 +1,11 @@
+line: test5
+actual: 15
+actual_hour: 15
+pp_plan: 14
+plan_per_hour: 14
+eff: 107.1
+hourly:
+  '2024083106': 15
+pp_hourly:
+  '2024083106': 0
+updated_at: '2024-08-31 06:06:45'

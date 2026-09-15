@@ -1,0 +1,18 @@
+[Unit]
+Description=GPIO Engine Service
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/home/linaro/ORBOARD/GPIO/dist/gpio_engine
+WorkingDirectory=/home/linaro/ORBOARD/GPIO
+Environment=ORBOARD_BASE_DIR=/home/linaro/ORBOARD/GPIO
+Restart=always
+RestartSec=3
+User=linaro
+Environment=PYTHONUNBUFFERED=1
+StandardOutput=append:/var/log/gpio_engine.log
+StandardError=append:/var/log/gpio_engine.err
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,31 @@
+[Unit]
+Description=Orboard Fullscreen
+After=run_orboard_web.service graphical.target
+Wants=run_orboard_web.service
+
+[Service]
+Type=simple
+User=linaro
+
+Environment=DISPLAY=:0
+Environment=XAUTHORITY=/home/linaro/.Xauthority
+
+ExecStartPre=/usr/bin/pkill -f chromium
+
+WorkingDirectory=/home/linaro/ORBOARD/Frontend/dist
+ExecStart=/usr/bin/chromium \
+--kiosk \
+--no-first--run \
+--disable-infobars \
+--disable-session-crashed_bubble \
+--user-data-dir=/home/linaro/.orboard-profile \
+http://127.0.0.1:3000
+
+
+
+Restart=no
+
+StandardOutput=journal
+StandardError=journal
+[Install]
+WantedBy=graphical.target

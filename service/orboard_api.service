@@ -1,0 +1,18 @@
+[Unit]
+Description=ORBOARD API Service
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/python3 -m uvicorn API.main:app --port 5000
+WorkingDirectory=/home/linaro/ORBOARD
+Environment=ORBOARD_BASE_DIR=/home/linaro/ORBOARD/GPIO
+Restart=always
+RestartSec=3
+User=linaro
+Environment=PYTHONUNBUFFERED=1
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target

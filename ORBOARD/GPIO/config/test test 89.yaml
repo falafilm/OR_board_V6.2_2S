@@ -1,0 +1,14 @@
+line: test test 89
+tt_sec: 10
+count_per_cycle: 1
+threshold: 80
+day_start: 08:00
+night_start: '20:00'
+reset_day_time: 07:50
+reset_night_time: '19:50'
+day_breaks:
+- enabled: true
+  start: '14:00'
+  end: '14:01'
+night_breaks: []
+enable: true
